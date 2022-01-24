@@ -4,8 +4,8 @@ title: Manuscript for Markup Language course - Using bayesian statistics to prov
 author: "Inan Bostanci"
 date: "1/15/2022"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
