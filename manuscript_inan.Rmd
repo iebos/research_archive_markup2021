@@ -436,13 +436,13 @@ I assume that the difference stems from the fact that the log of GDP is even str
 
 <div class = "row">
 <div class = "col-md-6">
-```{r mh function log - traceplots, fig.cap="\\label{fig:figs}Figure 3: Trace plots and histograms for the model using log(GDP).", echo = FALSE}
+```{r mh function with log(GDP) - traceplots,  echo = FALSE}
 set.seed(100)
 result.log <- mhsampler(y = dat$mheight, x1 = dat$protein, x2 = dat$loggdp, N = nrow(dat), prop.low1 = 0.035, prop.up1 = 0.061,start2.1 = 0.05, start2.2 = 0.04, start3.1 = 0.1, start3.2 = 0.09, niter = 50000)
 ```
 </div>
 <div class = "col-md-6">
-```{r mh function log - posterior distributions, echo = FALSE}
+```{r mh function with log(GDP) - posterior distributions, echo = FALSE}
 par(mfrow = c(2, 2))
 hist(result.log$burned.chain1[,1])
 hist(result.log$burned.chain1[,2])
