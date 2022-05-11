@@ -4,8 +4,8 @@ title: Manuscript for Markup Language course - Using bayesian statistics to prov
 author: "Inan Bostanci"
 date: "1/15/2022"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -121,7 +121,7 @@ I will also test the assumption of the absence of outliers with a PPP. For this,
 To test if the parameters are meaningful, the Bayes Factor (BF) will be used for the hypothesis $H_1$ of both coefficients being equal to zero vs. the complementary hypothesis $H_u$ that the coefficients are not equal to zero ($H_1: \beta_1 = 0, \beta_2 = 0; H_u: \beta_1,\beta_2$). The BF can be interpreted in the following way: A BF of 0.5 indicates that there is twice as much support for $H_u$ than for $H_1$, while a BF of 2 indicates that there is twice as much support for $H_1$ than for $H_u$.
 
 ## 4.5 Testing the hypotheses
-Finally, I will test my claims about the effect of protein and GDP on height in several ways. First, I will test the hypothesis that the effect of protein is larger than the effect of GDP using the BF with standardized coefficients (denoted by the subscript $stz; H_2: \beta_{1stz} > \beta_{2stz}; H_u: \beta_{1stz} ≤ \beta_{2stz}$). Next, I will use the MCMC-method to model the data with a one-predictor-model using just the protein or GDP-variable. I will then compare all three models by means of the DIC, which is a function of the model’s fit and complexity. I expect the DIC of the model containing protein only to be lower than the DIC of the model containing GDP only. Furthermore, I expect the model containing protein only to have about the same DIC as the model containing both parameters. This is because I expect the fit to be about as good, since I believe that protein is by far the stronger predictor, and the complexity to be just minorly different, since the full model only has one added parameter given a large sample size. 
+Finally, I will test my claims about the effect of protein and GDP on height in several ways. First, I will test the hypothesis that the effect of protein is larger than the effect of GDP using the BF with standardized coefficients (denoted by the subscript $stz; H_2: \beta_{1stz} > \beta_{2stz}; H_u: \beta_{1stz} \le \beta_{2stz}$). Next, I will use the MCMC-method to model the data with a one-predictor-model using just the protein or GDP-variable. I will then compare all three models by means of the DIC, which is a function of the model’s fit and complexity. I expect the DIC of the model containing protein only to be lower than the DIC of the model containing GDP only. Furthermore, I expect the model containing protein only to have about the same DIC as the model containing both parameters. This is because I expect the fit to be about as good, since I believe that protein is by far the stronger predictor, and the complexity to be just minorly different, since the full model only has one added parameter given a large sample size. 
 
 # 5 Frequentist methods vs. Bayesian methods
 This study does not use classical statistical methods to answer the research question and instead draws upon Bayesian methods. This might surprise my friend and I will therefore highlight the advantages for this specific research question.  
